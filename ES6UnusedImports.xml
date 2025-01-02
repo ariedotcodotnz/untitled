@@ -1,0 +1,158 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/BlockSettings.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/BlockSettings.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier BlockSettings as IBlockSettings</description>
+  <highlighted_element>BlockSettings as IBlockSettings</highlighted_element>
+  <language>TypeScript</language>
+  <offset>21</offset>
+  <length>31</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier BlockContent</description>
+  <highlighted_element>BlockContent</highlighted_element>
+  <language>TypeScript</language>
+  <offset>36</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier BlockType</description>
+  <highlighted_element>BlockType</highlighted_element>
+  <language>TypeScript</language>
+  <offset>21</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier BlockContent</description>
+  <highlighted_element>BlockContent</highlighted_element>
+  <language>TypeScript</language>
+  <offset>47</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>&lt;html&gt;Unused &lt;span style=&quot;color:#cf8e6d;&quot;&gt;import&amp;#32;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;type&amp;#32;{&amp;#32;BlockType&amp;#32;}&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;from&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#6aab73;&quot;&gt;'../../types'&lt;/span&gt;&lt;span style=&quot;&quot;&gt;;&lt;/span&gt;&lt;/html&gt;</description>
+  <highlighted_element>import type { BlockType } from '../../types';</highlighted_element>
+  <language>TypeScript</language>
+  <offset>0</offset>
+  <length>45</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>&lt;html&gt;Unused &lt;pre&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;import&amp;#32;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;{&amp;#32;Search,&amp;#32;Plus,&amp;#32;Layout,&amp;#32;Type,&amp;#32;Image,&amp;#32;Video,&amp;#32;Code&amp;#32;}&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;from&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#6aab73;&quot;&gt;'lucide-react'&lt;/span&gt;&lt;span style=&quot;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/html&gt;</description>
+  <highlighted_element>import { Search, Plus, Layout, Type, Image, Video, Code } from 'lucide-react';</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>0</offset>
+  <length>78</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>5</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier Lock</description>
+  <highlighted_element>Lock</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>30</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>5</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier Trash2</description>
+  <highlighted_element>Trash2</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>36</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>5</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier Plus</description>
+  <highlighted_element>Plus</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>44</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PageSettings/index.tsx</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PageSettings/index.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier Globe</description>
+  <highlighted_element>Globe</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>46</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>&lt;html&gt;Unused &lt;pre&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;import&amp;#32;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;{&amp;#32;PlusCircle,&amp;#32;Trash2&amp;#32;}&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;from&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#6aab73;&quot;&gt;'lucide-react'&lt;/span&gt;&lt;span style=&quot;&quot;&gt;;&lt;/span&gt;&lt;/pre&gt;&lt;/html&gt;</description>
+  <highlighted_element>import { PlusCircle, Trash2 } from 'lucide-react';</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>0</offset>
+  <length>50</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>Unused import specifier Theme</description>
+  <highlighted_element>Theme</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>14</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/hooks/useSiteData.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/hooks/useSiteData.ts" />
+  <problem_class id="ES6UnusedImports" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused import</problem_class>
+  <description>&lt;html&gt;Unused &lt;span style=&quot;color:#cf8e6d;&quot;&gt;import&amp;#32;&lt;/span&gt;&lt;span style=&quot;&quot;&gt;{&amp;#32;useState&amp;#32;}&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#cf8e6d;&quot;&gt;from&amp;#32;&lt;/span&gt;&lt;span style=&quot;color:#6aab73;&quot;&gt;'react'&lt;/span&gt;&lt;span style=&quot;&quot;&gt;;&lt;/span&gt;&lt;/html&gt;</description>
+  <highlighted_element>import { useState } from 'react';</highlighted_element>
+  <language>TypeScript</language>
+  <offset>0</offset>
+  <length>33</length>
+</problem>
+</problems>

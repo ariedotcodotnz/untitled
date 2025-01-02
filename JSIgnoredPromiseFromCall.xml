@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>101</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSIgnoredPromiseFromCall" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Result of method call returning a promise is ignored</problem_class>
+  <description>Promise returned from loadSite is ignored</description>
+  <highlighted_element>loadSite</highlighted_element>
+  <language>JavaScript</language>
+  <offset>8</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>138</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSIgnoredPromiseFromCall" severity="WEAK WARNING" attribute_key="INFO_ATTRIBUTES">Result of method call returning a promise is ignored</problem_class>
+  <description>Promise returned from debouncedSave is ignored</description>
+  <highlighted_element>debouncedSave</highlighted_element>
+  <language>JavaScript</language>
+  <offset>8</offset>
+  <length>13</length>
+</problem>
+</problems>

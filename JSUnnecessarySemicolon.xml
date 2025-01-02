@@ -1,0 +1,26 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnnecessarySemicolon" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary semicolon</problem_class>
+  <description>Unnecessary semicolon #loc</description>
+  <highlighted_element>;</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>32</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>490</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnnecessarySemicolon" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unnecessary semicolon</problem_class>
+  <description>Unnecessary semicolon #loc</description>
+  <highlighted_element>;</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>1</offset>
+  <length>1</length>
+</problem>
+</problems>

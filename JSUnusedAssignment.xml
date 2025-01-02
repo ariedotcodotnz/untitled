@@ -1,0 +1,62 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>392</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnusedAssignment" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+  <description>Variable might not have been initialized #loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>27</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>402</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnusedAssignment" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+  <description>Variable might not have been initialized #loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>44</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>443</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnusedAssignment" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+  <description>Variable might not have been initialized #loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>55</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>467</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnusedAssignment" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+  <description>Variable might not have been initialized #loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>42</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>476</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="JSUnusedAssignment" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused assignment</problem_class>
+  <description>Variable might not have been initialized #loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>30</offset>
+  <length>4</length>
+</problem>
+</problems>

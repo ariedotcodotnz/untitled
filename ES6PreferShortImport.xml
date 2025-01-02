@@ -1,0 +1,386 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/BlockWrapper.tsx</file>
+  <line>4</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/BlockWrapper.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/CombinationManager.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/CombinationManager.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>56</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>88</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>31</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/ColumnsBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/ColumnsBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>70</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/EmbedBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/EmbedBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>41</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/GalleryBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/GalleryBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/ImageBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/ImageBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/TextBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/TextBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/index.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/index.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>15</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../hooks/useToast'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>25</offset>
+  <length>19</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>16</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../hooks/useSiteData'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>28</offset>
+  <length>22</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>17</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../hooks/useAuth'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>24</offset>
+  <length>18</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>19</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>53</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>22</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>55</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/Navigation/index.tsx</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/Navigation/index.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>26</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PageList.tsx</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PageList.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>26</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PageSettings/index.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PageSettings/index.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>40</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PreviewFrame.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PreviewFrame.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>57</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PublishModal.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PublishModal.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>21</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/SiteSettings.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/SiteSettings.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>21</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/index.tsx</file>
+  <line>7</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/index.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>58</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>33</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ComponentsSection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ComponentsSection.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/SpacingSection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/SpacingSection.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>34</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../../../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>44</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/hooks/useSiteData.ts</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/hooks/useSiteData.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>21</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/utils/blockUtils.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/utils/blockUtils.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/utils/historyManager.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/utils/historyManager.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>27</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/utils/url.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/utils/url.ts" />
+  <problem_class id="ES6PreferShortImport" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Import can be shortened</problem_class>
+  <description>Import can be shortened</description>
+  <highlighted_element>'../types'</highlighted_element>
+  <language>JavaScript</language>
+  <offset>26</offset>
+  <length>10</length>
+</problem>
+</problems>

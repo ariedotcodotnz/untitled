@@ -1,0 +1,54 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/App.css</file>
+  <line>5</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/App.css" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector App-logo is never used</description>
+  <highlighted_element>.App-logo</highlighted_element>
+  <language>CSS</language>
+  <offset>0</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/App.css</file>
+  <line>11</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/App.css" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector App-logo is never used</description>
+  <highlighted_element>.App-logo</highlighted_element>
+  <language>CSS</language>
+  <offset>2</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/App.css</file>
+  <line>16</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/App.css" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector App-header is never used</description>
+  <highlighted_element>.App-header</highlighted_element>
+  <language>CSS</language>
+  <offset>0</offset>
+  <length>11</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/App.css</file>
+  <line>27</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/App.css" />
+  <problem_class id="CssUnusedSymbol" severity="WARNING" attribute_key="NOT_USED_ELEMENT_ATTRIBUTES">Unused selector</problem_class>
+  <hints />
+  <description>Selector App-link is never used</description>
+  <highlighted_element>.App-link</highlighted_element>
+  <language>CSS</language>
+  <offset>0</offset>
+  <length>9</length>
+</problem>
+</problems>

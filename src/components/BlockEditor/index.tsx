@@ -1,6 +1,8 @@
+import "./editor.css"
 import React, { useState, useRef, useCallback, useEffect } from 'react';
 import type { Block } from '../../types';
 import { BLOCK_TYPES } from './blockTypes';
+
 
 interface BlockEditorProps {
     blocks: Block[];
@@ -10,11 +12,11 @@ interface BlockEditorProps {
 }
 
 export const BlockEditor: React.FC<BlockEditorProps> = ({
-                                                            blocks,
-                                                            onBlocksChange,
-                                                            isDragging,
-                                                            onDraggingChange
-                                                        }) => {
+    blocks,
+    onBlocksChange,
+    isDragging,
+    onDraggingChange
+}) => {
     const [selectedBlockId, setSelectedBlockId] = useState<string | null>(null);
     const [focusedBlockId, setFocusedBlockId] = useState<string | null>(null);
     const editorRef = useRef<HTMLDivElement>(null);
@@ -52,11 +54,11 @@ export const BlockEditor: React.FC<BlockEditorProps> = ({
         return (
             <div
                 key={block.id}
-                className={`block-wrapper ${
-                    selectedBlockId === block.id ? 'selected' : ''
-                } ${focusedBlockId === block.id ? 'focused' : ''}`}
+                className={` block-wrapper  px-3 border-white ${selectedBlockId === block.id ? 'selected' : ''
+                    } ${focusedBlockId === block.id ? 'focused' : ''}`}
                 onClick={() => setSelectedBlockId(block.id)}
             >
+
                 {/* Block controls */}
                 <div className="block-controls">
                     {/* Your controls JSX */}
@@ -76,9 +78,13 @@ export const BlockEditor: React.FC<BlockEditorProps> = ({
     return (
         <div
             ref={editorRef}
-            className="block-editor p-4 min-h-screen"
+            className="block-editor editor_box pt-[0.68rem]  min-h-screen bg-[rgb(232,234,237)] w-[calc(100%-320px)] mr-auto"
         >
-            {blocks.map(renderBlock)}
+            <div className="editor_block border border-[#DADCE0] min-w-full pb-7  px-[3.7rem] bg-[#F1F3F4]">
+                <div className="main_block bg-white min-h-[100vh] shadow-[]">
+                    {blocks.map(renderBlock)}
+                </div>
+            </div>
         </div>
     );
 };

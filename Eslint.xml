@@ -1,0 +1,290 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/BlockSettings.ts</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/BlockSettings.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'IBlockSettings' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>IBlockSettings</highlighted_element>
+  <language>JavaScript</language>
+  <offset>38</offset>
+  <length>14</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'BlockContent' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>BlockContent</highlighted_element>
+  <language>JavaScript</language>
+  <offset>36</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts</file>
+  <line>4</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockCombination.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'BlockTemplate' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>BlockTemplate</highlighted_element>
+  <language>JavaScript</language>
+  <offset>10</offset>
+  <length>13</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'BlockType' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>BlockType</highlighted_element>
+  <language>JavaScript</language>
+  <offset>21</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTemplates.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'BlockContent' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>BlockContent</highlighted_element>
+  <language>JavaScript</language>
+  <offset>47</offset>
+  <length>12</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blockTypes.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'BlockType' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>BlockType</highlighted_element>
+  <language>JavaScript</language>
+  <offset>14</offset>
+  <length>9</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts</file>
+  <line>75</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: Unnecessary escape character: \/. (no-useless-escape)</description>
+  <highlighted_element>\/</highlighted_element>
+  <language>JavaScript</language>
+  <offset>57</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts</file>
+  <line>75</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockEditor/blocks/VideoBlock.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: Unnecessary escape character: \/. (no-useless-escape)</description>
+  <highlighted_element>\/</highlighted_element>
+  <language>JavaScript</language>
+  <offset>115</offset>
+  <length>2</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Search' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Search</highlighted_element>
+  <language>JavaScript</language>
+  <offset>9</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Plus' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Plus</highlighted_element>
+  <language>JavaScript</language>
+  <offset>17</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Layout' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Layout</highlighted_element>
+  <language>JavaScript</language>
+  <offset>23</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Type' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Type</highlighted_element>
+  <language>JavaScript</language>
+  <offset>31</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Image' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Image</highlighted_element>
+  <language>JavaScript</language>
+  <offset>37</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Video' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Video</highlighted_element>
+  <language>JavaScript</language>
+  <offset>44</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/BlockLibrary.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/BlockLibrary.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Code' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Code</highlighted_element>
+  <language>JavaScript</language>
+  <offset>51</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Eslint" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: Parsing error: ',' expected.</description>
+  <highlighted_element>]</highlighted_element>
+  <language>JavaScript</language>
+  <offset>30</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PageSettings/index.tsx</file>
+  <line>3</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PageSettings/index.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Globe' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Globe</highlighted_element>
+  <language>JavaScript</language>
+  <offset>46</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/PageSettings/index.tsx</file>
+  <line>44</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/PageSettings/index.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: React Hook useCallback has a missing dependency: 'isDescendant'. Either include it or remove the dependency array. (react-hooks/exhaustive-deps)</description>
+  <highlighted_element>[</highlighted_element>
+  <language>JavaScript</language>
+  <offset>7</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'PlusCircle' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>PlusCircle</highlighted_element>
+  <language>JavaScript</language>
+  <offset>9</offset>
+  <length>10</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/ColorSection.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Trash2' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Trash2</highlighted_element>
+  <language>JavaScript</language>
+  <offset>21</offset>
+  <length>6</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx</file>
+  <line>2</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/ThemeEditor/sections/TypographySection.tsx" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'Theme' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>Theme</highlighted_element>
+  <language>JavaScript</language>
+  <offset>14</offset>
+  <length>5</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/hooks/useSiteData.ts</file>
+  <line>1</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/hooks/useSiteData.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: 'useState' is defined but never used. (@typescript-eslint/no-unused-vars)</description>
+  <highlighted_element>useState</highlighted_element>
+  <language>JavaScript</language>
+  <offset>9</offset>
+  <length>8</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/utils/url.ts</file>
+  <line>12</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/utils/url.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: Function declared in a loop contains unsafe references to variable(s) 'currentPage'. (no-loop-func)</description>
+  <highlighted_element>p</highlighted_element>
+  <language>JavaScript</language>
+  <offset>33</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/utils/url.ts</file>
+  <line>34</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/utils/url.ts" />
+  <problem_class id="Eslint" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">ESLint</problem_class>
+  <description>ESLint: Function declared in a loop contains unsafe references to variable(s) 'currentPage'. (no-loop-func)</description>
+  <highlighted_element>p</highlighted_element>
+  <language>JavaScript</language>
+  <offset>33</offset>
+  <length>1</length>
+</problem>
+</problems>

@@ -1,0 +1,67 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Annotator" severity="INFORMATION" attribute_key="INFORMATION_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>#loc</description>
+  <highlighted_element>[site, handleSiteUpdate]</highlighted_element>
+  <language>TypeScript JSX</language>
+  <offset>7</offset>
+  <length>24</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Annotator" severity="INFORMATION" attribute_key="INFORMATION_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>#loc</description>
+  <highlighted_element>site</highlighted_element>
+  <language>JavaScript</language>
+  <offset>8</offset>
+  <length>4</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Annotator" severity="INFORMATION" attribute_key="INFORMATION_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>#loc</description>
+  <highlighted_element>handleSiteUpdate</highlighted_element>
+  <language>JavaScript</language>
+  <offset>14</offset>
+  <length>16</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>250</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Newline or semicolon expected #loc</description>
+  <highlighted_element>)</highlighted_element>
+  <language>JavaScript</language>
+  <offset>31</offset>
+  <length>1</length>
+</problem>
+<problem>
+  <file>file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx</file>
+  <line>489</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/components/GoogleSitesClone.tsx" />
+  <problem_class id="Annotator" severity="ERROR" attribute_key="WRONG_REFERENCES_ATTRIBUTES">Annotator</problem_class>
+  <hints />
+  <description>Statement expected #loc</description>
+  <highlighted_element />
+  <language>TypeScript JSX</language>
+  <offset>6</offset>
+  <length>0</length>
+</problem>
+</problems>

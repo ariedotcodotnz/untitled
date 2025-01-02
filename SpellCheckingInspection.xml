@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/reportWebVitals.ts</file>
+  <line>5</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/reportWebVitals.ts" />
+  <problem_class id="SpellCheckingInspection" severity="TYPO" attribute_key="TYPO">Typo</problem_class>
+  <description>Typo: In word 'TTFB'</description>
+  <highlighted_element>TTFB</highlighted_element>
+  <language>TypeScript</language>
+  <offset>68</offset>
+  <length>4</length>
+</problem>
+</problems>

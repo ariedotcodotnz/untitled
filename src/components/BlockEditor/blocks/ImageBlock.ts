@@ -1,155 +1,174 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import type { Block } from '../../../types';
-import type { ThemeSettings } from '../../ThemeEditor/themeSystem';
-
-interface ImageBlockContent {
-    url: string;
-    alt: string;
-    caption?: string;
-    focalPoint: { x: number; y: number };
-    aspectRatio: '1:1' | '4:3' | '16:9' | 'original';
-    style: {
-        borderRadius: 'none' | 'small' | 'medium' | 'large';
-        shadow: 'none' | 'small' | 'medium' | 'large';
-        padding: 'none' | 'small' | 'medium' | 'large';
-    };
-    overlay?: {
-        enabled: boolean;
-        color: string;
-        opacity: number;
-    };
-    lightbox: boolean;
-    lazy: boolean;
-    responsive: {
-        mobile: { width: number; scale: number };
-        tablet: { width: number; scale: number };
-        desktop: { width: number; scale: number };
-    };
-}
+import type { Block, ImageBlockContent } from '../../../types';
 
 @customElement('site-image-block')
 export class ImageBlock extends LitElement {
     @property({ type: Object }) block!: Block;
-    @property({ type: Object }) theme!: ThemeSettings;
     @state() private isEditing = false;
-    @state() private isDragging = false;
-    @state() private dragStart = { x: 0, y: 0 };
-    @state() private showLightbox = false;
+    @state() private isDraggingFocalPoint = false;
+    @state() private isResizing = false;
+    @state() private uploadProgress = 0;
 
     static styles = css`
         :host {
             display: block;
+            position: relative;
         }
+
         .image-container {
             position: relative;
             width: 100%;
             overflow: hidden;
         }
+
         .image-wrapper {
             position: relative;
             width: 100%;
             height: 100%;
         }
+
         img {
             width: 100%;
             height: 100%;
             object-fit: cover;
             transition: transform 0.3s ease;
         }
+
         .overlay {
             position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            pointer-events: none;
-            transition: background-color 0.3s ease;
-        }
-        .controls {
-            position: absolute;
-            bottom: 1rem;
-            right: 1rem;
-            display: flex;
-            gap: 0.5rem;
+            inset: 0;
+            background: rgba(0,0,0,0.5);
             opacity: 0;
-            transition: opacity 0.2s ease;
-        }
-        :host(:hover) .controls {
-            opacity: 1;
-        }
-        .control-button {
-            padding: 0.5rem;
-            background: var(--theme-background-primary);
-            border: none;
-            border-radius: var(--theme-border-radius-medium);
-            box-shadow: var(--theme-shadow-medium);
-            cursor: pointer;
-            color: var(--theme-text-primary);
-        }
-        .control-button:hover {
-            background: var(--theme-background-secondary);
-        }
-        .caption {
-            margin-top: 0.5rem;
-            font-size: var(--theme-body-size);
-            color: var(--theme-text-secondary);
-            text-align: center;
-        }
-        .lightbox {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.9);
+            transition: opacity 0.2s;
             display: flex;
             align-items: center;
             justify-content: center;
-            z-index: 1000;
+            color: white;
         }
-        .lightbox img {
-            max-width: 90vw;
-            max-height: 90vh;
-            object-fit: contain;
+
+        :host(:hover) .overlay {
+            opacity: 1;
+        }
+
+        .controls {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .control-button {
+            padding: 0.5rem 1rem;
+            background: white;
+            border: none;
+            border-radius: 0.25rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+        }
+
+        .focal-point {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: white;
+            border: 2px solid var(--theme-primary);
+            transform: translate(-50%, -50%);
+            cursor: move;
+        }
+
+        .resize-handle {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border: 2px solid var(--theme-primary);
+            right: -5px;
+            bottom: -5px;
+            cursor: se-resize;
+        }
+
+        .upload-progress {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .upload-progress-bar {
+            height: 100%;
+            background: var(--theme-primary);
+            transition: width 0.3s ease;
+        }
+
+        .image-caption {
+            margin-top: 0.5rem;
+            font-size: 0.875rem;
+            color: var(--theme-text-secondary);
+            text-align: center;
+        }
+
+        input[type="file"] {
+            display: none;
         }
     `;
 
-    private handleImageLoad(e: Event) {
-        const img = e.target as HTMLImageElement;
-        const content = this.block.content;
+    private handleImageUpload(e: Event) {
+        const input = e.target as HTMLInputElement;
+        const file = input.files?.[0];
+        if (!file) return;
 
-        if (content.aspectRatio && content.aspectRatio !== 'original') {
-            const [width, height] = content.aspectRatio.split(':').map(Number);
-            const containerWidth = this.offsetWidth;
-            const containerHeight = (containerWidth * height) / width;
-            img.style.height = `${containerHeight}px`;
-        }
+        // Simulate upload progress
+        const interval = setInterval(() => {
+            this.uploadProgress += 10;
+            if (this.uploadProgress >= 100) {
+                clearInterval(interval);
+
+                // Read file and update block
+                const reader = new FileReader();
+                reader.onload = (e) => {
+                    const content = this.block.content as ImageBlockContent;
+                    this.dispatchEvent(new CustomEvent('block-update', {
+                        detail: {
+                            ...this.block,
+                            content: {
+                                ...content,
+                                url: e.target?.result as string,
+                                originalName: file.name
+                            }
+                        },
+                        bubbles: true,
+                        composed: true
+                    }));
+                    this.uploadProgress = 0;
+                };
+                reader.readAsDataURL(file);
+            }
+        }, 100);
     }
 
-    private handleDragStart(e: MouseEvent) {
-        this.isDragging = true;
-        this.dragStart = {
-            x: e.clientX - (this.block.content as ImageBlockContent).focalPoint.x,
-            y: e.clientY - (this.block.content as ImageBlockContent).focalPoint.y
-        };
-    }
-
-    private handleDragMove(e: MouseEvent) {
-        if (!this.isDragging) return;
+    private handleFocalPointDrag(e: MouseEvent) {
+        if (!this.isDraggingFocalPoint) return;
 
         const rect = this.getBoundingClientRect();
-        const x = Math.max(0, Math.min(1, (e.clientX - this.dragStart.x) / rect.width));
-        const y = Math.max(0, Math.min(1, (e.clientY - this.dragStart.y) / rect.height));
+        const x = (e.clientX - rect.left) / rect.width;
+        const y = (e.clientY - rect.top) / rect.height;
 
+        const content = this.block.content as ImageBlockContent;
         this.dispatchEvent(new CustomEvent('block-update', {
             detail: {
                 ...this.block,
                 content: {
-                    ...this.block.content,
+                    ...content,
                     focalPoint: { x, y }
                 }
-            }
+            },
+            bubbles: true,
+            composed: true
         }));
     }
 
@@ -157,81 +176,103 @@ export class ImageBlock extends LitElement {
         const content = this.block.content as ImageBlockContent;
 
         return html`
-            <div 
-                class="image-container"
-                style="
-                    border-radius: var(--theme-border-radius-${content.style.borderRadius});
-                    box-shadow: var(--theme-shadow-${content.style.shadow});
-                    padding: var(--theme-block-padding-${content.style.padding});
-                "
-            >
-                <div 
-                    class="image-wrapper"
-                    @mousedown=${this.handleDragStart}
-                    @mousemove=${this.handleDragMove}
-                    @mouseup=${() => this.isDragging = false}
-                    @mouseleave=${() => this.isDragging = false}
-                >
-                    <img
-                        src=${content.url}
-                        alt=${content.alt}
-                        loading=${content.lazy ? 'lazy' : 'eager'}
-                        @load=${this.handleImageLoad}
-                        style="
+            <div class="image-container">
+                <div class="image-wrapper">
+                    <img 
+                        src=${content.url} 
+                        alt=${content.alt || ''} 
+                        style=${content.focalPoint ? `
                             transform: scale(1.1) translate(
                                 ${(content.focalPoint.x - 0.5) * 100}%,
                                 ${(content.focalPoint.y - 0.5) * 100}%
-                            );
-                        "
-                        @click=${() => content.lightbox && (this.showLightbox = true)}
-                    />
-                    ${content.overlay?.enabled ? html`
-                        <div 
-                            class="overlay"
-                            style="
-                                background-color: ${content.overlay.color};
-                                opacity: ${content.overlay.opacity};
-                            "
-                        ></div>
-                    ` : ''}
-
-                    <div class="controls">
-                        <button
-                            class="control-button"
-                            @click=${() => this.isEditing = true}
-                            title="Edit image"
-                        >
-                            <svg width="16" height="16" viewBox="0 0 16 16">
-                                <path d="M12.1 3.9l-7 7-1.2-1.2 7-7 1.2 1.2zM4.5 11.5L3 13l-.5-2 2-.5z"/>
-                            </svg>
-                        </button>
-                        ${content.lightbox ? html`
-                            <button
-                                class="control-button"
-                                @click=${() => this.showLightbox = true}
-                                title="View full size"
-                            >
-                                <svg width="16" height="16" viewBox="0 0 16 16">
-                                    <path d="M2 2v4h2V4h2V2H2zm8 0v2h2v2h2V2h-4zm2 10h-2v2h4v-4h-2v2zM4 12H2v4h4v-2H4v-2z"/>
-                                </svg>
-                            </button>
+                            )
                         ` : ''}
-                    </div>
+                    />
+
+                    ${this.isEditing ? html`
+                        <div class="overlay">
+                            <div class="controls">
+                                <label class="control-button">
+                                    <span>Upload Image</span>
+                                    <input 
+                                        type="file" 
+                                        accept="image/*"
+                                        @change=${this.handleImageUpload}
+                                    />
+                                </label>
+                                <button 
+                                    class="control-button"
+                                    @click=${() => this.isEditing = false}
+                                >
+                                    <span>Done</span>
+                                </button>
+                            </div>
+                        </div>
+
+                        ${content.focalPoint ? html`
+                            <div 
+                                class="focal-point"
+                                style=${`
+                                    left: ${content.focalPoint.x * 100}%;
+                                    top: ${content.focalPoint.y * 100}%;
+                                `}
+                                @mousedown=${() => this.isDraggingFocalPoint = true}
+                                @mousemove=${this.handleFocalPointDrag}
+                                @mouseup=${() => this.isDraggingFocalPoint = false}
+                            ></div>
+                        ` : null}
+
+                        <div class="resize-handle"></div>
+                    ` : html`
+                        <div class="overlay" @click=${() => this.isEditing = true}>
+                            <span>Click to edit</span>
+                        </div>
+                    `}
+
+                    ${this.uploadProgress > 0 ? html`
+                        <div class="upload-progress">
+                            <div 
+                                class="upload-progress-bar"
+                                style=${`width: ${this.uploadProgress}%`}
+                            ></div>
+                        </div>
+                    ` : null}
                 </div>
 
-                ${content.caption ? html`
-                    <div class="caption">${content.caption}</div>
-                ` : ''}
+${content.caption ? html`
+                    <div class="image-caption" 
+                        contenteditable="true"
+                        @input=${(e: InputEvent) => {
+            const target = e.target as HTMLElement;
+            this.dispatchEvent(new CustomEvent('block-update', {
+                detail: {
+                    ...this.block,
+                    content: {
+                        ...content,
+                        caption: target.textContent || ''
+                    }
+                },
+                bubbles: true,
+                composed: true
+            }));
+        }}
+                    >${content.caption}</div>
+                ` : null}
             </div>
-
-            ${this.showLightbox ? html`
-                <div 
-                    class="lightbox"
-                    @click=${() => this.showLightbox = false}
-                >
-                    <img src=${content.url} alt=${content.alt} />
-                </div>
-            ` : ''}
         `;
+    }
+
+    // Add connected callback for event listeners
+    connectedCallback() {
+        super.connectedCallback();
+        window.addEventListener('mousemove', this.handleFocalPointDrag.bind(this));
+        window.addEventListener('mouseup', () => this.isDraggingFocalPoint = false);
+    }
+
+    // Clean up event listeners
+    disconnectedCallback() {
+        super.disconnectedCallback();
+        window.removeEventListener('mousemove', this.handleFocalPointDrag.bind(this));
+        window.removeEventListener('mouseup', () => this.isDraggingFocalPoint = false);
     }
 }

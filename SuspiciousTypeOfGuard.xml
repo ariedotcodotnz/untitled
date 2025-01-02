@@ -1,0 +1,14 @@
+<problems>
+<problem>
+  <file>file://$PROJECT_DIR$/src/reportWebVitals.ts</file>
+  <line>4</line>
+  <module>untitled</module>
+  <entry_point TYPE="file" FQNAME="file://$PROJECT_DIR$/src/reportWebVitals.ts" />
+  <problem_class id="SuspiciousTypeOfGuard" severity="WARNING" attribute_key="WARNING_ATTRIBUTES">Unsound type guard check</problem_class>
+  <description>Redundant 'instanceof' check: 'onPerfEntry' has type 'Function' or a subtype of 'Function'</description>
+  <highlighted_element>onPerfEntry instanceof Function</highlighted_element>
+  <language>TypeScript</language>
+  <offset>21</offset>
+  <length>31</length>
+</problem>
+</problems>

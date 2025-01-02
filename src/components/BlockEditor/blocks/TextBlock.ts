@@ -1,49 +1,31 @@
 import { LitElement, html, css } from 'lit';
 import { customElement, property, state } from 'lit/decorators.js';
-import type { Block } from '../../../types';
-import type { ThemeSettings } from '../../ThemeEditor/themeSystem';
-
-interface TextBlockContent {
-    text: string;
-    style: 'normal' | 'heading1' | 'heading2' | 'heading3' | 'heading4' | 'accent';
-    alignment: 'left' | 'center' | 'right';
-    color: 'primary' | 'secondary' | 'accent' | 'custom';
-    customColor?: string;
-    format: {
-        bold: boolean;
-        italic: boolean;
-        underline: boolean;
-        strikethrough: boolean;
-    };
-    links: Array<{
-        text: string;
-        url: string;
-        range: [number, number];
-    }>;
-}
+import type { Block, TextBlockContent } from '../../../types';
 
 @customElement('site-text-block')
 export class TextBlock extends LitElement {
     @property({ type: Object }) block!: Block;
-    @property({ type: Object }) theme!: ThemeSettings;
     @state() private isEditing = false;
+    @state() private selection: Range | null = null;
 
     static styles = css`
         :host {
             display: block;
+            position: relative;
         }
+
         .text-container {
             position: relative;
             width: 100%;
         }
+
         .text-content {
             width: 100%;
             outline: none;
             transition: all 0.2s ease;
+            min-height: 1em;
         }
-        .text-content:focus {
-            box-shadow: 0 0 0 2px var(--theme-primary-color, #3B82F6);
-        }
+
         .toolbar {
             position: absolute;
             top: -40px;
@@ -54,64 +36,71 @@ export class TextBlock extends LitElement {
             background: white;
             padding: 0.5rem;
             border-radius: 0.5rem;
-            box-shadow: var(--theme-shadow-medium);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            z-index: 100;
             opacity: 0;
-            transition: opacity 0.2s ease;
+            visibility: hidden;
+            transition: opacity 0.2s, visibility 0.2s;
         }
+
         :host([editing]) .toolbar {
             opacity: 1;
+            visibility: visible;
         }
+
         .toolbar-button {
-            padding: 0.25rem;
-            border: none;
+            padding: 0.5rem;
             background: none;
-            cursor: pointer;
+            border: none;
             border-radius: 0.25rem;
+            cursor: pointer;
             color: var(--theme-text-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
+
         .toolbar-button:hover {
             background: var(--theme-background-secondary);
         }
+
         .toolbar-button[active] {
-            color: var(--theme-primary-color);
+            color: var(--theme-primary);
             background: var(--theme-background-accent);
         }
-        
-        /* Text styles based on theme */
-        .style-heading1 {
-            font-size: var(--theme-h1-size);
-            font-weight: var(--theme-h1-weight);
-            line-height: var(--theme-h1-line-height);
-            letter-spacing: var(--theme-h1-letter-spacing);
-            font-family: var(--theme-h1-font-family);
+
+        .toolbar-separator {
+            width: 1px;
+            height: 24px;
+            background: var(--theme-border);
+            margin: 0 0.25rem;
         }
-        .style-heading2 {
-            font-size: var(--theme-h2-size);
-            font-weight: var(--theme-h2-weight);
-            line-height: var(--theme-h2-line-height);
-            letter-spacing: var(--theme-h2-letter-spacing);
-            font-family: var(--theme-h2-font-family);
-        }
-        /* ...similar styles for other heading levels... */
-        
-        .style-accent {
-            font-size: var(--theme-accent-size);
-            font-weight: var(--theme-accent-weight);
-            line-height: var(--theme-accent-line-height);
-            font-family: var(--theme-accent-font-family);
+
+        /* Text styles */
+        .format-h1 { font-size: 2.5rem; font-weight: bold; }
+        .format-h2 { font-size: 2rem; font-weight: bold; }
+        .format-h3 { font-size: 1.5rem; font-weight: bold; }
+        .format-p { font-size: 1rem; }
+        .format-quote {
+            font-size: 1.25rem;
+            font-style: italic;
+            border-left: 4px solid var(--theme-primary);
+            padding-left: 1rem;
         }
     `;
 
     private handleInput(e: InputEvent) {
-        const target = e.target as HTMLElement;
+        const content = this.block.content as TextBlockContent;
         this.dispatchEvent(new CustomEvent('block-update', {
             detail: {
                 ...this.block,
                 content: {
-                    ...this.block.content,
-                    text: target.innerText
+                    ...content,
+                    text: (e.target as HTMLElement).textContent || '',
                 }
-            }
+            },
+            bubbles: true,
+            composed: true
         }));
     }
 
@@ -127,11 +116,13 @@ export class TextBlock extends LitElement {
                         [format]: !content.format[format]
                     }
                 }
-            }
+            },
+            bubbles: true,
+            composed: true
         }));
     }
 
-    private changeStyle(style: TextBlockContent['style']) {
+    private changeStyle(style: string) {
         const content = this.block.content as TextBlockContent;
         this.dispatchEvent(new CustomEvent('block-update', {
             detail: {
@@ -140,50 +131,48 @@ export class TextBlock extends LitElement {
                     ...content,
                     style
                 }
-            }
+            },
+            bubbles: true,
+            composed: true
         }));
     }
 
-    private renderToolbar() {
-        const content = this.block.content as TextBlockContent;
-        return html`
-            <div class="toolbar">
-                <select
-                    @change=${(e: Event) => this.changeStyle((e.target as HTMLSelectElement).value as TextBlockContent['style'])}
-                >
-                    <option value="normal">Normal</option>
-                    <option value="heading1">Heading 1</option>
-                    <option value="heading2">Heading 2</option>
-                    <option value="heading3">Heading 3</option>
-                    <option value="heading4">Heading 4</option>
-                    <option value="accent">Accent</option>
-                </select>
-                
-                <button
-                    class="toolbar-button"
-                    ?active=${content.format.bold}
-                    @click=${() => this.toggleFormat('bold')}
-                    title="Bold"
-                >
-                    <svg width="16" height="16" viewBox="0 0 16 16">
-                        <path d="M8.5 3H5v10h4.5c1.93 0 3.5-1.57 3.5-3.5S10.43 6 8.5 6H7V3h1.5zM8.5 8c.83 0 1.5.67 1.5 1.5S9.33 11 8.5 11H7V8h1.5z"/>
-                    </svg>
-                </button>
-                
-                <button
-                    class="toolbar-button"
-                    ?active=${content.format.italic}
-                    @click=${() => this.toggleFormat('italic')}
-                    title="Italic"
-                >
-                    <svg width="16" height="16" viewBox="0 0 16 16">
-                        <path d="M7 3h4v2h-1l-2 6h1v2H5v-2h1l2-6H7V3z"/>
-                    </svg>
-                </button>
+    private handleKeyDown(e: KeyboardEvent) {
+        // Handle special key combinations
+        if (e.key === 'Enter' && !e.shiftKey) {
+            e.preventDefault();
+            // Create a new text block below
+            this.dispatchEvent(new CustomEvent('create-block', {
+                detail: { type: 'text', after: this.block.id },
+                bubbles: true,
+                composed: true
+            }));
+        }
 
-                <!-- Add more toolbar buttons for other formatting options -->
-            </div>
-        `;
+        if (e.key === 'Backspace' && (e.target as HTMLElement).textContent === '') {
+            e.preventDefault();
+            // Delete empty block
+            this.dispatchEvent(new CustomEvent('delete-block', {
+                detail: { id: this.block.id },
+                bubbles: true,
+                composed: true
+            }));
+        }
+    }
+
+    private saveSelection() {
+        const selection = window.getSelection();
+        if (selection && selection.rangeCount > 0) {
+            this.selection = selection.getRangeAt(0).cloneRange();
+        }
+    }
+
+    private restoreSelection() {
+        if (this.selection) {
+            const selection = window.getSelection();
+            selection?.removeAllRanges();
+            selection?.addRange(this.selection);
+        }
     }
 
     render() {
@@ -191,32 +180,67 @@ export class TextBlock extends LitElement {
 
         return html`
             <div class="text-container">
-                ${this.isEditing ? this.renderToolbar() : ''}
+                ${this.isEditing ? html`
+                    <div class="toolbar">
+                        <button class="toolbar-button" @click=${() => this.changeStyle('p')}>
+                            <span>¶</span>
+                        </button>
+                        <button class="toolbar-button" @click=${() => this.changeStyle('h1')}>
+                            <span>H1</span>
+                        </button>
+                        <button class="toolbar-button" @click=${() => this.changeStyle('h2')}>
+                            <span>H2</span>
+                        </button>
+                        <button class="toolbar-button" @click=${() => this.changeStyle('h3')}>
+                            <span>H3</span>
+                        </button>
+
+                        <div class="toolbar-separator"></div>
+
+                        <button 
+                            class="toolbar-button" 
+                            ?active=${content.format.bold}
+                            @click=${() => this.toggleFormat('bold')}
+                        >
+                            <span>B</span>
+                        </button>
+                        <button 
+                            class="toolbar-button"
+                            ?active=${content.format.italic}
+                            @click=${() => this.toggleFormat('italic')}
+                        >
+                            <span>I</span>
+                        </button>
+                        <button 
+                            class="toolbar-button"
+                            ?active=${content.format.underline}
+                            @click=${() => this.toggleFormat('underline')}
+                        >
+                            <span>U</span>
+                        </button>
+                    </div>
+                ` : null}
+
                 <div
-                    class="text-content style-${content.style}"
+                    class="text-content format-${content.style || 'p'}"
                     contenteditable="true"
+                    @input=${this.handleInput}
+                    @keydown=${this.handleKeyDown}
+                    @focus=${() => {
+            this.isEditing = true;
+            this.saveSelection();
+        }}
+                    @blur=${() => {
+            this.isEditing = false;
+            this.saveSelection();
+        }}
                     style="
-                        text-align: ${content.alignment};
-                        color: var(--theme-text-${content.color});
                         ${content.format.bold ? 'font-weight: bold;' : ''}
                         ${content.format.italic ? 'font-style: italic;' : ''}
                         ${content.format.underline ? 'text-decoration: underline;' : ''}
-                        ${content.format.strikethrough ? 'text-decoration: line-through;' : ''}
                     "
-                    @focus=${() => this.isEditing = true}
-                    @blur=${() => this.isEditing = false}
-                    @input=${this.handleInput}
-                    .innerHTML=${content.text}
-                ></div>
+                >${content.text}</div>
             </div>
         `;
-    }
-
-    updated(changedProperties: Map<string, any>) {
-        if (changedProperties.has('theme')) {
-            this.style.setProperty('--theme-primary-color', this.theme.colors.primary);
-            this.style.setProperty('--theme-h1-size', this.theme.typography.headings.h1.fontSize);
-            // ... set other theme CSS variables
-        }
     }
 }
